@@ -114,8 +114,7 @@ names(coef)[6] <- sorteddf[1,1]
 coefdf <- 10^(data.frame(coef, stringsAsFactors=FALSE))
 
 #final attribute importance
-attrImportance <- data.frame(t(coefdf / sum(coefdf) * 100))
-names(attrImportance)[1] <- "importance"
+attrImportance <- coefdf / sum(coefdf) * 100
 
 return(attrImportance)
 }
