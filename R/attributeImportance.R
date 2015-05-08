@@ -116,5 +116,5 @@ coefdf <- 10^(data.frame(coef, stringsAsFactors=FALSE))
 #final attribute importance
 attrImportance <- coefdf / sum(coefdf) * 100
 
-return(attrImportance)
+return(data.frame(attrImportance))
 }
